@@ -12,6 +12,7 @@ namespace AzureFunctions.Pipeline.Examples
         public override void Configure(IFunctionsHostBuilder builder)
         {
             builder.Services.AddPipeline();
+
             builder.Services.AddScoped<IPipelineItem, PipelineItemTest>();
             builder.Services.AddScoped<IPipelineItem, PipelineItemTest2>();
         }
