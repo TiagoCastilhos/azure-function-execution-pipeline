@@ -21,7 +21,7 @@ namespace AzureFunctions.Pipeline.Examples
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = null)] 
             HttpRequest req)
         {
-            return await _functionPipeline.ExecuteAsync(() => new OkResult());
+            return await _functionPipeline.ExecuteAsync(async () => await Task.Run(() => new OkResult()));
         }
     }
 }

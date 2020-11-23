@@ -17,7 +17,7 @@ namespace AzureFunctions.Pipeline
             Items = items;
         }
 
-        public async Task<IActionResult> ExecuteAsync(Func<IActionResult> action, CancellationToken cancellationToken = default)
+        public async Task<IActionResult> ExecuteAsync(Func<Task<IActionResult>> action, CancellationToken cancellationToken = default)
         {
             try
             {

@@ -10,6 +10,6 @@ namespace AzureFunctions.Pipeline.Abstractions
     {
         IEnumerable<IPipelineItem> Items { get; }
 
-        Task<IActionResult> ExecuteAsync(Func<IActionResult> action, CancellationToken cancellationToken = default);
+        Task<IActionResult> ExecuteAsync(Func<Task<IActionResult>> action, CancellationToken cancellationToken = default);
     }
 }
