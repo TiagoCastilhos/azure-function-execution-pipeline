@@ -26,5 +26,5 @@ jobs:
     - name: Publish  
       uses: brandedoutcast/publish-nuget@v2.5.2  
       with:   
-        PROJECT_FILE_PATH: src/AzureFunctions.Pipeline/AzureFunctions.Pipeline.csproj 
+        PROJECT_FILE_PATH: src/**/*.csproj 
         NUGET_KEY: ${{secrets.NUGET_API_KEY}} 
